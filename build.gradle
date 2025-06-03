@@ -32,14 +32,6 @@ repositories {
         name = "placeholderapi"
         url = "https://repo.extendedclip.com/content/repositories/placeholderapi/"
     }
-    maven {
-        name = "oraxen"
-        url = "https://repo.oraxen.com/releases"
-    }
-    maven {
-        name = "lumine"
-        url = "https://mvn.lumine.io/repository/maven-public/"
-    }
 }
 
 dependencies {
@@ -47,13 +39,13 @@ dependencies {
     compileOnly "org.spigotmc:spigot-api:1.13-R0.1-SNAPSHOT"
     
     // NeigeItems
-    compileOnly files('libs/NeigeItems-1.21.77.jar')
+    compileOnly files('libs/NeigeItems-1.21.77-api.jar')
     
     // NBTAPI
     compileOnly files('libs/item-nbt-api-plugin-2.15.0.jar')
     
     // ItemsAdder
-    compileOnly "com.github.LoneDev6:API-ItemsAdder:3.6.3-beta-14"
+    compileOnly files('libs/ItemsAdder_4.0.8.jar')
     
     // bStats
     implementation 'org.bstats:bstats-bukkit:3.0.2'
@@ -62,26 +54,24 @@ dependencies {
     compileOnly 'me.clip:placeholderapi:2.11.5'
 
     // Oraxen
-    compileOnly 'io.th0rgal:oraxen:4.16.0'
+    compileOnly files('libs/oraxen-1.189.0.jar')
 
     // MythicMobs
-    compileOnly 'io.lumine:MythicLib:1.6.2'
-    compileOnly 'io.lumine:MythicBukkit:5.3.5'
+    compileOnly files('libs/MythicLib-1.7.jar')
+    compileOnly files('libs/MythicBukkit.jar')
 
     // MMOItems
-    compileOnly 'net.Indyuce:MMOItems:6.9.4'
+    compileOnly files('libs/MMOItems-6.10.1-18.jar')
 
-    // Zaphkiel (暂时注释)
-    // compileOnly 'ink.ptms:zaphkiel:2.0.0'
-
-    // CraftEngine (暂时注释)
-    // compileOnly 'net.momirealms:craftengine:1.0.0'
+    // CraftEngine
+    compileOnly files('libs/craft-engine-core-0.0.56.jar')
+    compileOnly files('libs/craft-engine-bukkit-0.0.56.jar')
 
     // Nexo (本地jar)
-    compileOnly files('libs/nexo.jar')
+    compileOnly files('libs/nexo-0.10.0.min.jar')
 
     // SXItem (本地jar)
-    compileOnly files('libs/sxitem.jar')
+    compileOnly files('libs/SX-Item-3.2.4-all.min.jar')
 }
 
 // 配置shadow插件，重定位bStats类
